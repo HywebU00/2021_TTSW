@@ -150,7 +150,7 @@
                 text-align: center;
             }
         }
-        .col{
+        .col {
             padding: 0 !important;
         }
     }
@@ -1894,7 +1894,7 @@
     border-radius: 8px 0 0 8px;
     position: fixed;
     right: 0%;
-    z-index: 15;
+    z-index: 99;
     animation: fixed_bar 2s $cubic;
     transform: translateZ(0);
     @media screen and (max-width: 1280px) {

@@ -223,7 +223,7 @@
                         transition: .3s ease-out;
                         box-sizing: border-box;
                         background: rgba(0, 0, 0, .1);
-                         @include screen('tablet') {
+                        @include screen('tablet') {
                             height: auto;
                             min-height: 5em;
                         }
@@ -291,7 +291,7 @@
         position: relative;
         background: $My_primaryColor;
         @include screen('xs_mobile') {
-            border:none;
+            border: none;
             margin-bottom: .5em;
         }
         &:before {
@@ -507,7 +507,7 @@
                     }
                     @include screen('mobile') {
                         font-size: 1em;
-                        border:1px solid #FFF;
+                        border: 1px solid #FFF;
                     }
                 }
             }
@@ -527,7 +527,7 @@
                             }
                             position: relative;
                             &:hover, &:focus {
-                                border:1px solid $secondaryColor !important;
+                                border: 1px solid $secondaryColor !important;
                                 background: rgba(0, 0, 0, .4) !important;
                             }
                         }
@@ -1738,7 +1738,7 @@
             overflow: hidden;
             display: flex;
             flex: 0 1 auto;
-            padding:.5em 0;
+            padding: .5em 0;
             flex-flow: wrap row;
             border: 1px solid #DDD;
             border-left: none;
@@ -2210,6 +2210,7 @@
         }
     }
 }
+
 //animation
 @keyframes fixed_bar {
     0% {
@@ -2226,11 +2227,11 @@
     width: 4.5em;
     background: RGBA(0, 0, 0, .75);
     height: auto;
-    bottom: 80px;
+    bottom: 150px;
     border-radius: 8px 0 0 8px;
     position: fixed;
     right: 0px;
-    z-index: 15;
+    z-index: 99;
     animation: fixed_bar 2s $cubic;
     transform: translateZ(0);
     @media screen and (max-width: 1280px) {

@@ -234,7 +234,7 @@ a.more {
                         transition: .3s ease-out;
                         box-sizing: border-box;
                         background: rgba(0, 0, 0, .1);
-                         @include screen('tablet') {
+                        @include screen('tablet') {
                             height: auto;
                             min-height: 5em;
                         }
@@ -414,7 +414,7 @@ a.more {
         height: 100%;
         margin-right: $grid-gutter-width/2;
         display: flex;
-        flex:1;
+        flex: 1;
         justify-content: center;
         align-items: center;
         @include screen('mobile') {
@@ -460,8 +460,8 @@ a.more {
                         }
                     }
                 }
-                a{
-                    display:flex;
+                a {
+                    display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-flow: column wrap;
@@ -500,7 +500,7 @@ a.more {
                         display: block;
                         @include screen('tablet') {
                             width: 45px;
-                        height: 45px;
+                            height: 45px;
                         }
                     }
                     &:hover, &:focus {
@@ -524,7 +524,7 @@ a.more {
                     li {
                         flex: 1 1 48%;
                         margin: 0;
-                        border:1px solid #FFF;
+                        border: 1px solid #FFF;
                         justify-content: center;
                         align-items: center;
                         .btn {
@@ -1652,7 +1652,7 @@ a.more {
             overflow: hidden;
             display: flex;
             flex: 0 1 auto;
-            padding:.5em 0;
+            padding: .5em 0;
             flex-flow: wrap row;
             border: 1px solid #DDD;
             border-left: none;
@@ -2143,7 +2143,7 @@ a.more {
     border-radius: 8px 0 0 8px;
     position: fixed;
     right: 0%;
-    z-index: 15;
+    z-index: 99;
     animation: fixed_bar 2s $cubic;
     transform: translateZ(0);
     @media screen and (max-width: 1280px) {

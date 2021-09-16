@@ -70,17 +70,29 @@
         }
         ul {
             @include li-reset;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-content: flex-sart;
             @include screen('mobile') {
                 width: 100%;
                 display: block;
                 margin: 0px auto;
             }
             li {
-                display: inline-block;
+                // display: inline-block;
                 text-align: left;
                 vertical-align: top;
-                margin: 0 -5px 1em 0;
+                // margin: 0 -5px 1em 0;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 16.6666%;
+                margin-bottom: 1em;
+                font-size: .938rem;
                 @include box-sizing;
+                @include screen('tablet') {
+                    flex-basis: 25%;
+                }
                 @include screen('mobile') {
                     display: block;
                     margin: 0 0 .4em
@@ -90,7 +102,8 @@
                     @include aSetting_nocolor;
                     display: block;
                     font-weight: bold;
-                    padding: .5em 0px;
+                    padding: .5em .5em 0px 0;
+                    white-space: normal;
                     @include box-sizing;
                     &:hover {
                         box-shadow: none;
@@ -104,10 +117,15 @@
                     }
                     li {
                         display: block;
+                        flex-basis: 100%;
                         margin: 0;
                         border: none;
                         background: none;
                         width: 100%;
+                        font-size: .875rem;
+                        @include screen('tablet') {
+                            flex-basis: 100%;
+                        }
                         a {
                             display: block;
                             font-weight: normal;
