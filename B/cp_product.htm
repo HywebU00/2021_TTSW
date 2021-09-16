@@ -13,6 +13,8 @@
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- fancybox -->
+    <link rel="stylesheet" text="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/tts_B.css">
 </head>
@@ -28,6 +30,11 @@
                 <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
                 <!-- navigation Start -->
                 <nav class="navigation">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">網站導覽</a></li>
+                        <li><a href="#">聯絡我們</a></li>
+                    </ul>
                     <div class="language">
                         <a href="#">Language</a>
                         <ul>
@@ -37,11 +44,6 @@
                         </ul>
                     </div>
                     <button class="btn btn_login">登入</button>
-                    <ul>
-                        <li><a href="#"><img src="images/nav_img.png" alt="">首頁</a></li>
-                        <li><a href="#">網站導覽</a></li>
-                        <li><a href="#">聯絡我們</a></li>
-                    </ul>
                 </nav>
                 <!-- navigation End -->
                 <h1>
@@ -59,7 +61,7 @@
                         <a href="#" class="close"></a>
                         <div class="form_grp cate">
                             <button class="btn">全文檢索</button>
-                            <div class="dropdown-content" style="display: none;" >
+                            <div class="dropdown-content" style="display: none;">
                                 <ul>
                                     <li><a href="#">全文檢索</a></li>
                                     <li><a href="#">找廠商</a></li>
@@ -175,30 +177,6 @@
                 </div>
                 <!-- h1節點 -->
                 <h1 class="title">產品資訊</h2>
-                    <!-- function功能區塊 -->
-                    <div class="function_panel">
-                        <!-- function功能區塊 -->
-                        <div class="function">
-                            <ul>
-                                <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
-                                <li class="print"><a href="#">友善列印</a></li>
-                                <li class="forward"><a href="#">轉寄友人</a></li>
-                            </ul>
-                        </div>
-                        <!-- 社群分享 -->
-                        <div class="share">
-                            <ul>
-                                <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
-                                <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
-                                <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
-                                <li><a href="#"><img src="images/basic/icon_youtube.png" alt="youtube"></a></li>
-                                <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
-                                <li><a href="#"><img src="images/basic/icon_instagram.png" alt="instagram"></a></li>
-                                <li><a href="#"><img src="images/basic/icon_linkedin.png" alt="LinkedIn"></a></li>
-                                <li><a href="#"><img src="images/basic/icon_rss.png" alt="RSS"></a></li>
-                            </ul>
-                        </div>
-                    </div>
                     <!-- 左側 -->
                     <div class="leftmenu">
                         <div class="taitracode_list">
@@ -226,11 +204,102 @@
                                 </li>
                                 <li><a href="#">藍牙及Wi-Fi無線喇叭<span>(24)</span></a>
                                 </li>
+                                <li><a href="#">自行車整車<span>(4碼)</span><span>(100)</span></a></li>
+                                <li><a href="#">自行車車架及組件<span>(4碼)</span><span>(100)</span></a></li>
+                                <li><a href="#">自行車車輪零件<span>(4碼)</span><span>(100)</span></a></li>
+                                <li><a href="#">自行車傳動零件<span>(4碼)</span><span>(100)</span></a></li>
+                                <li><a href="#">運動服<span>(4碼)</span><span>(100)</span></a>
+                                    <ul>
+                                        <li><a href="#">自行車<span>(100)</span></a></li>
+                                        <li><a href="#">自行車衣<span>(21)</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">手機及平板電腦<span>(35)</span><span>(100)</span></a>
+                                    <ul>
+                                        <li><a href="#">智慧穿戴裝置<span>(25)</span></a></li>
+                                        <li><a href="#">平板電腦<span>(10)</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">消費性電子配件<span>(20)</span><span>(100)</span></a>
+                                    <ul>
+                                        <li><a href="#">可攜式喇叭<span>(12)</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">藍牙及Wi-Fi無線喇叭<span>(24)</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- tag -->
+                        <div class="tag_group">
+                            <ul>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                            </ul>
+                            <a class="more" data-fancybox data-src="#tag_all" href="javascript:;">更多</a>
+                        </div>
+                    </div>
+                    <!-- 預設關閉開燈箱 記得載入 fancybox css js-->
+                    <div class="tag_all" id="tag_all" style="display:none;">
+                        <h2>標籤</h2>
+                        <div class="tag_group">
+                            <ul>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
                             </ul>
                         </div>
                     </div>
                     <!-- CP Start -->
                     <section class="cp">
+                        <!-- function功能區塊 -->
+                        <div class="function_panel">
+                            <!-- function功能區塊 -->
+                            <div class="function">
+                                <ul>
+                                    <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                                    <li class="print"><a href="#">友善列印</a></li>
+                                    <li class="forward"><a href="#">轉寄友人</a></li>
+                                </ul>
+                            </div>
+                            <!-- 社群分享 -->
+                            <div class="share">
+                                <ul>
+                                    <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
+                                    <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
+                                    <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
+                                    <li><a href="#"><img src="images/basic/icon_youtube.png" alt="youtube"></a></li>
+                                    <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
+                                    <li><a href="#"><img src="images/basic/icon_instagram.png" alt="instagram"></a></li>
+                                    <li><a href="#"><img src="images/basic/icon_linkedin.png" alt="LinkedIn"></a></li>
+                                    <li><a href="#"><img src="images/basic/icon_rss.png" alt="RSS"></a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <ul class="info">
                             <li>發布日期:2019/12/4</li>
                             <li>發布單位:外貿協會</li>
@@ -253,12 +322,12 @@
                             <div class="img-container">
                                 <img src="images/feature_01.jpg">
                             </div>
-                            <h2>迷你電動車</h2>
+                            <h2>迷你電動車迷你電動車迷你電動車迷你電動車</h2>
                             <div class="taiwantrade_logo">
                                 <img src="images/logo_taiwantrade.png" alt="">
                             </div>
                             <ul>
-                                <li><i class="i_building"></i><a href="#">帝霸興業股份有限公司查看公司</a></li>
+                                <li><i class="i_building"></i><a href="#">帝霸興業股份有限公司查看公司帝霸興業股份有限公司查看公司帝霸興業股份有限公司查看公司</a></li>
                                 <li><i class="i_location"></i>南港二館 P0702a</li>
                                 <li><i class="i_box"></i>產品型號：F-121E</li>
                             </ul>
@@ -267,6 +336,16 @@
                                 <a href="#"><i class="i_question"></i></a>
                                 <a href="#"><i class="i_video"></i></a>
                                 <a href="#"><i class="i_collect "></i></a>
+                            </div>
+                            <!-- tag -->
+                            <div class="tag_group">
+                                <ul>
+                                    <li><a href="#">標籤1</a></li>
+                                    <li><a href="#">標籤2</a></li>
+                                    <li><a href="#">標籤3</a></li>
+                                    <li><a href="#">標籤4</a></li>
+                                    <li><a href="#">標籤5</a></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="divider">產品特色</div>
@@ -335,7 +414,7 @@
                                 </div>
                                 <div class="img-container">
                                     <a href="images/feature_03.jpg" data-caption="第四張圖說">
-                                       <picture>
+                                        <picture>
                                             <source media="(min-width: 1200px)" data-lazy-srcset="images/feature_03.jpg">
                                             <source media="(min-width: 992px)" data-lazy-srcset="images/feature_03.jpg">
                                             <source media="(min-width: 576px)" data-lazy-srcset="images/feature_03.jpg">
@@ -348,7 +427,7 @@
                                 </div>
                             </div>
                         </div>
-                         <!-- file download 檔案下載 -->
+                        <!-- file download 檔案下載 -->
                         <!-- <div class="file_download">
                             <h3>檔案下載</h3>
                             <ul>
@@ -554,6 +633,8 @@
     <script src="vendor/slick/slick-lightbox.js "></script>
     <script src="vendor/lazyload/lazyload.min.js"></script>
     <script src="vendor/picturefill/picturefill.min.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->

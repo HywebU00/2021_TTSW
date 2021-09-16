@@ -13,6 +13,8 @@
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- fancybox -->
+    <link rel="stylesheet" text="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/tts_B.css">
 </head>
@@ -59,7 +61,7 @@
                         <a href="#" class="close"></a>
                         <div class="form_grp cate">
                             <button class="btn">全文檢索</button>
-                            <div class="dropdown-content" style="display: none;" >
+                            <div class="dropdown-content" style="display: none;">
                                 <ul>
                                     <li><a href="#">全文檢索</a></li>
                                     <li><a href="#">找廠商</a></li>
@@ -220,6 +222,50 @@
                             <li><a href="#">德國 <span>(3)</span></a></li>
                         </ul>
                     </div>
+                    <!-- tag -->
+                    <div class="tag_group">
+                        <ul>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                        </ul>
+                        <a class="more" data-fancybox data-src="#tag_all" href="javascript:;">更多</a>
+                    </div>
+                </div>
+                <!-- 預設關閉開燈箱 記得載入 fancybox css js-->
+                <div class="tag_all" id="tag_all" style="display:none;">
+                    <h2>標籤</h2>
+                    <div class="tag_group">
+                        <ul>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- LP Start -->
                 <section class="lp">
@@ -241,21 +287,20 @@
                             <div class="check_grp">
                                 <label><input type="checkbox" value="">全選</label>
                             </div>
-                                <label for="selectSample" class="form_title">排序方式</label>
-                                <div class="form_content form_inline">
-                                    <select id="selectSample" name="">
-                                        <option value="">優良廠商</option>
-                                        <option value="">相關度</option>
-                                        <option value="">筆畫</option>
-                                    </select>
-                                </div>
+                            <label for="selectSample" class="form_title">排序方式</label>
+                            <div class="form_content form_inline">
+                                <select id="selectSample" name="">
+                                    <option value="">優良廠商</option>
+                                    <option value="">相關度</option>
+                                    <option value="">筆畫</option>
+                                </select>
                             </div>
-
+                        </div>
                         <div class="btn_grp">
                             <a href="lp_sponsor.htm" class="view_btn"><i class="i_grid_view"></i></a>
-                             <a href="#" class="view_btn active"><i class="i_list_view"></i></a>
+                            <a href="#" class="view_btn active"><i class="i_list_view"></i></a>
                         </div>
-                         <div class="btn_grp">
+                        <div class="btn_grp">
                             <button class="btn btn-sm btn-primary">攤位圖顯示</button>
                         </div>
                     </div>
@@ -271,19 +316,19 @@
                     <!-- 公司列表 -->
                     <div class="company_list">
                         <ul>
-                             <!-- 如果被選取，li 請加上class ="checked" -->
-                             <li class="checked">
+                            <!-- 如果被選取，li 請加上class ="checked" -->
+                            <li class="checked">
                                 <label><input type="checkbox" checked></label>
                                 <h3><a href="#"><img src="images/premier_advertiser.png" alt="">廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱廠商名稱</a></h3>
                                 <div class="img-container">
                                     <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
-                                            <img data-src="images/hyweb.jpg" class="lazy">
-                                            <noscript><img src="images/hyweb.jpg"></noscript>
-                                        </picture>
+                                        <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
+                                        <img data-src="images/hyweb.jpg" class="lazy">
+                                        <noscript><img src="images/hyweb.jpg"></noscript>
+                                    </picture>
                                 </div>
                                 <ul>
                                     <li><span>品牌名稱：</span>Hyread口網站開發口網站開發口網站開發口網站開發口網站開發口網站開發口網站開發</li>
@@ -297,19 +342,28 @@
                                     <a href="#" title="預約"><i class="i_calendar"></i></a>
                                     <a href="#" title="聊天"><i class="i_chat"></i></a>
                                 </div>
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <label><input type="checkbox"></label>
                                 <h3><a href="#">廠商名稱</a></h3>
                                 <div class="img-container">
                                     <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
-                                            <img data-src="images/hyweb.jpg" class="lazy">
-                                            <noscript><img src="images/hyweb.jpg"></noscript>
-                                        </picture>
+                                        <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
+                                        <img data-src="images/hyweb.jpg" class="lazy">
+                                        <noscript><img src="images/hyweb.jpg"></noscript>
+                                    </picture>
                                 </div>
                                 <ul>
                                     <li><span>品牌名稱：</span>Hyread</li>
@@ -322,6 +376,15 @@
                                     <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
                                     <a href="#" title="預約"><i class="i_calendar"></i></a>
                                     <a href="#" title="聊天"><i class="i_chat"></i></a>
+                                </div>
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li>
@@ -329,13 +392,13 @@
                                 <h3><a href="#">廠商名稱</a></h3>
                                 <div class="img-container">
                                     <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
-                                            <img data-src="images/hyweb.jpg" class="lazy">
-                                            <noscript><img src="images/hyweb.jpg"></noscript>
-                                        </picture>
+                                        <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
+                                        <img data-src="images/hyweb.jpg" class="lazy">
+                                        <noscript><img src="images/hyweb.jpg"></noscript>
+                                    </picture>
                                 </div>
                                 <ul>
                                     <li><span>品牌名稱：</span>Hyread</li>
@@ -348,6 +411,15 @@
                                     <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
                                     <a href="#" title="預約"><i class="i_calendar"></i></a>
                                     <a href="#" title="聊天"><i class="i_chat"></i></a>
+                                </div>
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li>
@@ -355,13 +427,13 @@
                                 <h3><a href="#">廠商名稱</a></h3>
                                 <div class="img-container">
                                     <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
-                                            <img data-src="images/hyweb.jpg" class="lazy">
-                                            <noscript><img src="images/hyweb.jpg"></noscript>
-                                        </picture>
+                                        <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
+                                        <img data-src="images/hyweb.jpg" class="lazy">
+                                        <noscript><img src="images/hyweb.jpg"></noscript>
+                                    </picture>
                                 </div>
                                 <ul>
                                     <li><span>品牌名稱：</span>Hyread</li>
@@ -374,6 +446,15 @@
                                     <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
                                     <a href="#" title="預約"><i class="i_calendar"></i></a>
                                     <a href="#" title="聊天"><i class="i_chat"></i></a>
+                                </div>
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li>
@@ -381,13 +462,13 @@
                                 <h3><a href="#">廠商名稱</a></h3>
                                 <div class="img-container">
                                     <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
-                                            <img data-src="images/hyweb.jpg" class="lazy">
-                                            <noscript><img src="images/hyweb.jpg"></noscript>
-                                        </picture>
+                                        <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
+                                        <img data-src="images/hyweb.jpg" class="lazy">
+                                        <noscript><img src="images/hyweb.jpg"></noscript>
+                                    </picture>
                                 </div>
                                 <ul>
                                     <li><span>品牌名稱：</span>Hyread</li>
@@ -400,6 +481,15 @@
                                     <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
                                     <a href="#" title="預約"><i class="i_calendar"></i></a>
                                     <a href="#" title="聊天"><i class="i_chat"></i></a>
+                                </div>
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li>
@@ -407,13 +497,13 @@
                                 <h3><a href="#">廠商名稱</a></h3>
                                 <div class="img-container">
                                     <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
-                                            <img data-src="images/hyweb.jpg" class="lazy">
-                                            <noscript><img src="images/hyweb.jpg"></noscript>
-                                        </picture>
+                                        <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
+                                        <img data-src="images/hyweb.jpg" class="lazy">
+                                        <noscript><img src="images/hyweb.jpg"></noscript>
+                                    </picture>
                                 </div>
                                 <ul>
                                     <li><span>品牌名稱：</span>Hyread</li>
@@ -426,6 +516,15 @@
                                     <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
                                     <a href="#" title="預約"><i class="i_calendar"></i></a>
                                     <a href="#" title="聊天"><i class="i_chat"></i></a>
+                                </div>
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li>
@@ -433,13 +532,13 @@
                                 <h3><a href="#">廠商名稱</a></h3>
                                 <div class="img-container">
                                     <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
-                                            <img data-src="images/hyweb.jpg" class="lazy">
-                                            <noscript><img src="images/hyweb.jpg"></noscript>
-                                        </picture>
+                                        <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
+                                        <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
+                                        <img data-src="images/hyweb.jpg" class="lazy">
+                                        <noscript><img src="images/hyweb.jpg"></noscript>
+                                    </picture>
                                 </div>
                                 <ul>
                                     <li><span>品牌名稱：</span>Hyread</li>
@@ -452,6 +551,15 @@
                                     <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
                                     <a href="#" title="預約"><i class="i_calendar"></i></a>
                                     <a href="#" title="聊天"><i class="i_chat"></i></a>
+                                </div>
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                         </ul>
@@ -565,7 +673,7 @@
             </div>
         </section>
         <!-- fatfooter End -->
-       <!-- footer Start-->
+        <!-- footer Start-->
         <footer>
             <div class="container">
                 <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
@@ -629,6 +737,8 @@
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
 </body>
 
 </html>

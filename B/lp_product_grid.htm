@@ -13,6 +13,8 @@
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- fancybox -->
+    <link rel="stylesheet" text="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/tts_B.css">
 </head>
@@ -28,6 +30,11 @@
                 <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
                 <!-- navigation Start -->
                 <nav class="navigation">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">網站導覽</a></li>
+                        <li><a href="#">聯絡我們</a></li>
+                    </ul>
                     <div class="language">
                         <a href="#">Language</a>
                         <ul>
@@ -37,11 +44,6 @@
                         </ul>
                     </div>
                     <button class="btn btn_login">登入</button>
-                    <ul>
-                        <li><a href="#"><img src="images/nav_img.png" alt="">首頁</a></li>
-                        <li><a href="#">網站導覽</a></li>
-                        <li><a href="#">聯絡我們</a></li>
-                    </ul>
                 </nav>
                 <!-- navigation End -->
                 <h1>
@@ -204,6 +206,50 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- tag -->
+                    <div class="tag_group">
+                        <ul>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                        </ul>
+                        <a class="more" data-fancybox data-src="#tag_all" href="javascript:;">更多</a>
+                    </div>
+                </div>
+                <!-- 預設關閉開燈箱 記得載入 fancybox css js-->
+                <div class="tag_all" id="tag_all" style="display:none;">
+                    <h2>標籤</h2>
+                    <div class="tag_group">
+                        <ul>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- LP Start -->
                 <section class="lp">
@@ -270,6 +316,16 @@
                                     <a href="#"><i class="i_star"></i></a>
                                     <a href="#" id="openModal"><i class="i_question"></i></a>
                                 </div>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <label><input type="checkbox"></label>
@@ -294,6 +350,16 @@
                                 <div class="personal_fuction">
                                     <a href="#"><i class="i_star_false"></i></a>
                                     <a href="#" id="openModal"><i class="i_question"></i></a>
+                                </div>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li class="checked">
@@ -320,30 +386,15 @@
                                     <a href="#"><i class="i_star_false"></i></a>
                                     <a href="#" id="openModal"><i class="i_question"></i></a>
                                 </div>
-                            </li>
-                            <li>
-                                <label><input type="checkbox"></label>
-                                <div class="img-container">
-                                    <a href="#">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/feature_04.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/feature_04.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/feature_04.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/feature_04.jpg">
-                                            <img data-src="images/feature_04.jpg" class="lazy">
-                                            <noscript><img src="images/feature_04.jpg"></noscript>
-                                        </picture>
-                                    </a>
-                                </div>
-                                <h3><a href="#">迷你電動車</a></h3>
-                                <ul>
-                                    <li><a href="#">帝霸興業股份有限公司</a></li>
-                                    <li>攤位號碼: 南港二館 P0702a</li>
-                                </ul>
-                                <p> 產品特色： 延續迷你車輕巧設計的概念，持續不斷地發展出一系列升級版的迷你電動車，一套專為迷你電動車所打造的優越動力系統讓迷你車騎遍市區或郊外 </p>
-                                <div class="personal_fuction">
-                                    <a href="#"><i class="i_star_false"></i></a>
-                                    <a href="#" id="openModal"><i class="i_question"></i></a>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li>
@@ -370,6 +421,16 @@
                                     <a href="#"><i class="i_star_false"></i></a>
                                     <a href="#" id="openModal"><i class="i_question"></i></a>
                                 </div>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <label><input type="checkbox"></label>
@@ -394,6 +455,51 @@
                                 <div class="personal_fuction">
                                     <a href="#"><i class="i_star_false"></i></a>
                                     <a href="#" id="openModal"><i class="i_question"></i></a>
+                                </div>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <label><input type="checkbox"></label>
+                                <div class="img-container">
+                                    <a href="#">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/feature_04.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/feature_04.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/feature_04.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/feature_04.jpg">
+                                            <img data-src="images/feature_04.jpg" class="lazy">
+                                            <noscript><img src="images/feature_04.jpg"></noscript>
+                                        </picture>
+                                    </a>
+                                </div>
+                                <h3><a href="#">迷你電動車</a></h3>
+                                <ul>
+                                    <li><a href="#">帝霸興業股份有限公司</a></li>
+                                    <li>攤位號碼: 南港二館 P0702a</li>
+                                </ul>
+                                <p> 產品特色： 延續迷你車輕巧設計的概念，持續不斷地發展出一系列升級版的迷你電動車，一套專為迷你電動車所打造的優越動力系統讓迷你車騎遍市區或郊外 </p>
+                                <div class="personal_fuction">
+                                    <a href="#"><i class="i_star_false"></i></a>
+                                    <a href="#" id="openModal"><i class="i_question"></i></a>
+                                </div>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                         </ul>
@@ -559,7 +665,7 @@
         </ul>
     </div>
     <!--視窗-->
-   <!--  <div class="modal question_colorbox" style="display:block;">
+    <!--  <div class="modal question_colorbox" style="display:block;">
         <button type="button" class="close">關閉</button>
         <h2>燈箱標題</h2>
         <div class="modal_content">
@@ -624,6 +730,8 @@
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <script>
     /*-----------------------------------*/
     /////////////modal設定/////////////

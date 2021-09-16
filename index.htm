@@ -93,7 +93,7 @@
     td a:hover {
         color: #dd0986
     }
-    td span.red{
+    td span.red {
         background: red;
         color: #FFF;
         font-size: .813rem;
@@ -117,6 +117,9 @@
         display: inline-block;
         vertical-align: middle;
         width: 1.5em;
+    }
+    .outline {
+        outline: 1px solid red;
     }
     </style>
 </head>
@@ -148,7 +151,7 @@
                         <td><a href="B/mp.htm"></a></td>
                         <td><a href="C/mp.htm"></a></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td></td>
                         <td>自由編輯區</td>
                         <td><a href="A/mp_edit.htm"></a></td>
@@ -172,6 +175,99 @@
                 </tbody>
             </table>
         </div>
+        <h2 style="color:red;">新增tag需要頁面</h2>
+        <div class="table_wrapper outline">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>A視覺潮流</th>
+                        <th>B經典設計</th>
+                        <th>C極簡風格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>產品型錄列表grid</td>
+                        <td><a href="A/lp_category_grid.htm"></a></td>
+                        <td><a href="B/lp_category_grid.htm"></a></td>
+                        <td><a href="C/lp_category_grid.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產品型錄列表list</td>
+                        <td><a href="A/lp_category_list.htm"></a></td>
+                        <td><a href="B/lp_category_list.htm"></a></td>
+                        <td><a href="C/lp_category_list.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產品型錄列表CP頁</td>
+                        <td><a href="A/cp_category.htm"></a></td>
+                        <td><a href="B/cp_category.htm"></a></td>
+                        <td><a href="C/cp_category.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產品型錄區-圖片列表頁(條列式)</td>
+                        <td><a href="A/lp_product.htm"></a></td>
+                        <td><a href="B/lp_product.htm"></a></td>
+                        <td><a href="C/lp_product.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產品型錄區-圖片列表頁(區塊式)</td>
+                        <td><a href="A/lp_product_grid.htm"></a></td>
+                        <td><a href="B/lp_product_grid.htm"></a></td>
+                        <td><a href="C/lp_product_grid.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產品型錄區-內容頁</td>
+                        <td><a href="A/cp_product.htm"></a></td>
+                        <td><a href="B/cp_product.htm"></a></td>
+                        <td><a href="C/cp_product.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>廠商展區列表-卡片式</td>
+                        <td><a href="A/lp_company.htm"></a></td>
+                        <td><a href="B/lp_company.htm"></a></td>
+                        <td><a href="C/lp_company.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>廠商展區列表-條列式</td>
+                        <td><a href="A/lp_company_list.htm"></a></td>
+                        <td><a href="B/lp_company_list.htm"></a></td>
+                        <td><a href="C/lp_company_list.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>廠商展區內容頁</td>
+                        <td><a href="A/cp_company.htm"></a></td>
+                        <td><a href="B/cp_company.htm"></a></td>
+                        <td><a href="C/cp_company.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>進階搜尋-產品</td>
+                        <td><a href="A/sp_advsearch_product.htm"></a></td>
+                        <td><a href="B/sp_advsearch_product.htm"></a></td>
+                        <td><a href="C/sp_advsearch_product.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>進階搜尋-廠商</td>
+                        <td><a href="A/sp_advsearch_company.htm"></a></td>
+                        <td><a href="B/sp_advsearch_company.htm"></a></td>
+                        <td><a href="C/sp_advsearch_company.htm"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <h2>標準共通頁面</h2>
         <div class="table_wrapper">
             <!-- hyUI 標準頁面 -->
@@ -188,21 +284,21 @@
                 <tbody>
                     <tr>
                         <td></td>
-                        <td><span class="red">新</span>產品型錄列表grid</td>
+                        <td>產品型錄列表grid</td>
                         <td><a href="A/lp_category_grid.htm"></a></td>
                         <td><a href="B/lp_category_grid.htm"></a></td>
                         <td><a href="C/lp_category_grid.htm"></a></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><span class="red">新</span>產品型錄列表list</td>
+                        <td>產品型錄列表list</td>
                         <td><a href="A/lp_category_list.htm"></a></td>
                         <td><a href="B/lp_category_list.htm"></a></td>
                         <td><a href="C/lp_category_list.htm"></a></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><span class="red">新</span>產品型錄列表CP頁</td>
+                        <td>產品型錄列表CP頁</td>
                         <td><a href="A/cp_category.htm"></a></td>
                         <td><a href="B/cp_category.htm"></a></td>
                         <td><a href="C/cp_category.htm"></a></td>

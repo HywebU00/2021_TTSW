@@ -13,6 +13,8 @@
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- fancybox -->
+    <link rel="stylesheet" text="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/tts_A.css">
     <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
@@ -206,6 +208,50 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- tag -->
+                    <div class="tag_group">
+                        <ul>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                        </ul>
+                        <a class="more" data-fancybox data-src="#tag_all" href="javascript:;">更多</a>
+                    </div>
+                </div>
+                <!-- 預設關閉開燈箱 記得載入 fancybox css js-->
+                <div class="tag_all" id="tag_all" style="display:none;">
+                    <h2>標籤</h2>
+                    <div class="tag_group">
+                        <ul>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- LP Start -->
                 <section class="lp">
@@ -283,6 +329,16 @@
                                     <a href="#"><i class="i_chat"></i><span>聊聊</span></a>
                                     <a href="#"><i class="i_book"></i><span>索取型錄</span></a>
                                 </div>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <label><input type="checkbox"></label>
@@ -312,6 +368,16 @@
                                     <a data-fancybox data-type="iframe" data-src="sp_reservation.htm" href="javascript:;"><i class="i_calendar"></i><span>預約</span></a>
                                     <a href="#"><i class="i_chat"></i><span>聊聊</span></a>
                                     <a href="#"><i class="i_book"></i><span>索取型錄</span></a>
+                                </div>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li class="checked">
@@ -343,35 +409,15 @@
                                     <a href="#"><i class="i_chat"></i><span>聊聊</span></a>
                                     <a href="#"><i class="i_book"></i><span>索取型錄</span></a>
                                 </div>
-                            </li>
-                            <li>
-                                <label><input type="checkbox"></label>
-                                <div class="img-container">
-                                    <a href="#" class="star"><i class="i_star_false"></i></a>
-                                    <a href="#">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/feature_04.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/feature_04.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/feature_04.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/feature_04.jpg">
-                                            <img data-src="images/feature_04.jpg" class="lazy">
-                                            <noscript><img src="images/feature_04.jpg"></noscript>
-                                            <span class="view_360"><i class="i_360"></i></span>
-                                            <span class="view_720"><i class="i_720"></i></span>
-                                        </picture>
-                                    </a>
-                                </div>
-                                <h3><a href="#">迷你電動車</a></h3>
-                                <ul>
-                                    <li><a href="#">帝霸興業股份有限公司</a></li>
-                                    <li>攤位號碼: 南港二館 P0702a</li>
-                                </ul>
-                                <p> 產品特色： 延續迷你車輕巧設計的概念，持續不斷地發展出一系列升級版的迷你電動車，一套專為迷你電動車所打造的優越動力系統讓迷你車騎遍市區或郊外 </p>
-                                <div class="personal_fuction">
-                                    <a href="#"><i class="i_mail"></i><span>聯絡廠商</span></a>
-                                    <a data-fancybox data-type="iframe" data-src="sp_reservation.htm" href="javascript:;"><i class="i_calendar"></i><span>預約</span></a>
-                                    <a href="#"><i class="i_chat"></i><span>聊聊</span></a>
-                                    <a href="#"><i class="i_book"></i><span>索取型錄</span></a>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li>
@@ -403,6 +449,16 @@
                                     <a href="#"><i class="i_chat"></i><span>聊聊</span></a>
                                     <a href="#"><i class="i_book"></i><span>索取型錄</span></a>
                                 </div>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <label><input type="checkbox"></label>
@@ -432,6 +488,56 @@
                                     <a data-fancybox data-type="iframe" data-src="sp_reservation.htm" href="javascript:;"><i class="i_calendar"></i><span>預約</span></a>
                                     <a href="#"><i class="i_chat"></i><span>聊聊</span></a>
                                     <a href="#"><i class="i_book"></i><span>索取型錄</span></a>
+                                </div>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <label><input type="checkbox"></label>
+                                <div class="img-container">
+                                    <a href="#" class="star"><i class="i_star_false"></i></a>
+                                    <a href="#">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/feature_04.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/feature_04.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/feature_04.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/feature_04.jpg">
+                                            <img data-src="images/feature_04.jpg" class="lazy">
+                                            <noscript><img src="images/feature_04.jpg"></noscript>
+                                            <span class="view_360"><i class="i_360"></i></span>
+                                            <span class="view_720"><i class="i_720"></i></span>
+                                        </picture>
+                                    </a>
+                                </div>
+                                <h3><a href="#">迷你電動車</a></h3>
+                                <ul>
+                                    <li><a href="#">帝霸興業股份有限公司</a></li>
+                                    <li>攤位號碼: 南港二館 P0702a</li>
+                                </ul>
+                                <p> 產品特色： 延續迷你車輕巧設計的概念，持續不斷地發展出一系列升級版的迷你電動車，一套專為迷你電動車所打造的優越動力系統讓迷你車騎遍市區或郊外 </p>
+                                <div class="personal_fuction">
+                                    <a href="#"><i class="i_mail"></i><span>聯絡廠商</span></a>
+                                    <a data-fancybox data-type="iframe" data-src="sp_reservation.htm" href="javascript:;"><i class="i_calendar"></i><span>預約</span></a>
+                                    <a href="#"><i class="i_chat"></i><span>聊聊</span></a>
+                                    <a href="#"><i class="i_book"></i><span>索取型錄</span></a>
+                                </div>
+                                <!-- tag -->
+                                <div class="tag_group">
+                                    <ul>
+                                        <li><a href="#">標籤1</a></li>
+                                        <li><a href="#">標籤2</a></li>
+                                        <li><a href="#">標籤3</a></li>
+                                        <li><a href="#">標籤4</a></li>
+                                        <li><a href="#">標籤5</a></li>
+                                    </ul>
                                 </div>
                             </li>
                         </ul>
@@ -658,6 +764,8 @@
     <script src="vendor/slick/slick-lightbox.js "></script>
     <script src="vendor/lazyload/lazyload.min.js"></script>
     <script src="vendor/picturefill/picturefill.min.js"></script>
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <!-- fancybox -->
     <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>

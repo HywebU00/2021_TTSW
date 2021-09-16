@@ -13,6 +13,8 @@
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- fancybox -->
+    <link rel="stylesheet" text="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/tts_A.css">
 </head>
@@ -250,6 +252,50 @@
                                 <li><a href="#">德國 <span>(3)</span></a></li>
                             </ul>
                         </div>
+                        <!-- tag -->
+                        <div class="tag_group">
+                            <ul>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                            </ul>
+                            <a class="more" data-fancybox data-src="#tag_all" href="javascript:;">更多</a>
+                        </div>
+                    </div>
+                    <!-- 預設關閉開燈箱 記得載入 fancybox css js-->
+                    <div class="tag_all" id="tag_all" style="display:none;">
+                        <h2>標籤</h2>
+                        <div class="tag_group">
+                            <ul>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- LP Start -->
                     <section class="lp">
@@ -312,6 +358,16 @@
                                         <a href="#" title="收藏"><i class="i_heart"></i></a>
                                         <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
                                     </div>
+                                    <!-- tag -->
+                                    <div class="tag_group">
+                                        <ul>
+                                            <li><a href="#">標籤1</a></li>
+                                            <li><a href="#">標籤2</a></li>
+                                            <li><a href="#">標籤3</a></li>
+                                            <li><a href="#">標籤4</a></li>
+                                            <li><a href="#">標籤5</a></li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li>
                                     <label><input type="checkbox"></label>
@@ -335,6 +391,16 @@
                                     <div class="company_function">
                                         <a href="#" title="收藏"><i class="i_heart_false"></i></a>
                                         <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    </div>
+                                    <!-- tag -->
+                                    <div class="tag_group">
+                                        <ul>
+                                            <li><a href="#">標籤1</a></li>
+                                            <li><a href="#">標籤2</a></li>
+                                            <li><a href="#">標籤3</a></li>
+                                            <li><a href="#">標籤4</a></li>
+                                            <li><a href="#">標籤5</a></li>
+                                        </ul>
                                     </div>
                                 </li>
                                 <li class="checked">
@@ -360,29 +426,15 @@
                                         <a href="#" title="收藏"><i class="i_heart_false"></i></a>
                                         <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
                                     </div>
-                                </li>
-                                <li>
-                                    <label><input type="checkbox"></label>
-                                    <h3><a href="#">廠商名稱</a></h3>
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
-                                            <img data-src="images/hyweb.jpg" class="lazy" src="images/hyweb.jpg" style="">
-                                            <noscript><img src="images/hyweb.jpg"></noscript>
-                                        </picture>
-                                    </div>
-                                    <ul>
-                                        <li><span>品牌名稱：</span>Hyread</li>
-                                        <li><span>主要產品：</span>HySearch 搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
-                                        <li>
-                                            <span>攤位號碼:</span>世貿一館,南港展覽館 1樓 CX11 </li>
-                                    </ul>
-                                    <div class="company_function">
-                                        <a href="#" title="收藏"><i class="i_heart_false"></i></a>
-                                        <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    <!-- tag -->
+                                    <div class="tag_group">
+                                        <ul>
+                                            <li><a href="#">標籤1</a></li>
+                                            <li><a href="#">標籤2</a></li>
+                                            <li><a href="#">標籤3</a></li>
+                                            <li><a href="#">標籤4</a></li>
+                                            <li><a href="#">標籤5</a></li>
+                                        </ul>
                                     </div>
                                 </li>
                                 <li>
@@ -408,29 +460,15 @@
                                         <a href="#" title="收藏"><i class="i_heart_false"></i></a>
                                         <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
                                     </div>
-                                </li>
-                                <li>
-                                    <label><input type="checkbox"></label>
-                                    <h3><a href="#">廠商名稱</a></h3>
-                                    <div class="img-container">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
-                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
-                                            <img data-src="images/hyweb.jpg" class="lazy" src="images/hyweb.jpg" style="">
-                                            <noscript><img src="images/hyweb.jpg"></noscript>
-                                        </picture>
-                                    </div>
-                                    <ul>
-                                        <li><span>品牌名稱：</span>Hyread</li>
-                                        <li><span>主要產品：</span>HySearch 搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
-                                        <li>
-                                            <span>攤位號碼:</span>世貿一館,南港展覽館 1樓 CX11 </li>
-                                    </ul>
-                                    <div class="company_function">
-                                        <a href="#" title="收藏"><i class="i_heart_false"></i></a>
-                                        <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    <!-- tag -->
+                                    <div class="tag_group">
+                                        <ul>
+                                            <li><a href="#">標籤1</a></li>
+                                            <li><a href="#">標籤2</a></li>
+                                            <li><a href="#">標籤3</a></li>
+                                            <li><a href="#">標籤4</a></li>
+                                            <li><a href="#">標籤5</a></li>
+                                        </ul>
                                     </div>
                                 </li>
                                 <li>
@@ -455,6 +493,84 @@
                                     <div class="company_function">
                                         <a href="#" title="收藏"><i class="i_heart_false"></i></a>
                                         <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    </div>
+                                    <!-- tag -->
+                                    <div class="tag_group">
+                                        <ul>
+                                            <li><a href="#">標籤1</a></li>
+                                            <li><a href="#">標籤2</a></li>
+                                            <li><a href="#">標籤3</a></li>
+                                            <li><a href="#">標籤4</a></li>
+                                            <li><a href="#">標籤5</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label><input type="checkbox"></label>
+                                    <h3><a href="#">廠商名稱</a></h3>
+                                    <div class="img-container">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
+                                            <img data-src="images/hyweb.jpg" class="lazy" src="images/hyweb.jpg" style="">
+                                            <noscript><img src="images/hyweb.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <ul>
+                                        <li><span>品牌名稱：</span>Hyread</li>
+                                        <li><span>主要產品：</span>HySearch 搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
+                                        <li>
+                                            <span>攤位號碼:</span>世貿一館,南港展覽館 1樓 CX11 </li>
+                                    </ul>
+                                    <div class="company_function">
+                                        <a href="#" title="收藏"><i class="i_heart_false"></i></a>
+                                        <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    </div>
+                                    <!-- tag -->
+                                    <div class="tag_group">
+                                        <ul>
+                                            <li><a href="#">標籤1</a></li>
+                                            <li><a href="#">標籤2</a></li>
+                                            <li><a href="#">標籤3</a></li>
+                                            <li><a href="#">標籤4</a></li>
+                                            <li><a href="#">標籤5</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label><input type="checkbox"></label>
+                                    <h3><a href="#">廠商名稱</a></h3>
+                                    <div class="img-container">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/hyweb.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/hyweb.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/hyweb.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/hyweb.jpg">
+                                            <img data-src="images/hyweb.jpg" class="lazy" src="images/hyweb.jpg" style="">
+                                            <noscript><img src="images/hyweb.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <ul>
+                                        <li><span>品牌名稱：</span>Hyread</li>
+                                        <li><span>主要產品：</span>HySearch 搜尋引擎,GIP 入口網站開發平台,GKP 知識入口網平台,Workflow</li>
+                                        <li>
+                                            <span>攤位號碼:</span>世貿一館,南港展覽館 1樓 CX11 </li>
+                                    </ul>
+                                    <div class="company_function">
+                                        <a href="#" title="收藏"><i class="i_heart_false"></i></a>
+                                        <a href="#" title="聯絡公司"><i class="i_mail"></i></a>
+                                    </div>
+                                    <!-- tag -->
+                                    <div class="tag_group">
+                                        <ul>
+                                            <li><a href="#">標籤1</a></li>
+                                            <li><a href="#">標籤2</a></li>
+                                            <li><a href="#">標籤3</a></li>
+                                            <li><a href="#">標籤4</a></li>
+                                            <li><a href="#">標籤5</a></li>
+                                        </ul>
                                     </div>
                                 </li>
                             </ul>
@@ -623,6 +739,8 @@
     <script src="vendor/slick/slick-lightbox.js "></script>
     <script src="vendor/lazyload/lazyload.min.js"></script>
     <script src="vendor/picturefill/picturefill.min.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
