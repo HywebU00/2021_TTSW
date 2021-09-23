@@ -995,22 +995,47 @@
     }
 }
 .product_search {
-    text-align: center;
-    padding: 1em 0;
-    margin: 0em auto 1em;
-    border-top: 2px solid $primaryColor;
-    @include gradient(#FFF, #F7F7F7, vertical);
-    @include screen('mobile') {
-        display: none;
-    }
-}
-.category_search {
     text-align: left;
     padding: 1em 0 0 0em;
     margin: 0em auto 1em 0em;
     border-top: 2px solid $primaryColor;
     border-bottom: 2px solid $primaryColor;
-    @include gradient(#FFF, #F7F7F7, vertical);
+    // @include gradient(#FFF, #F7F7F7, vertical);
+    .tag_group {
+        margin-top: 0;
+        padding: .5em;
+        ul {
+            li {
+                a {
+                    &.openMore {
+                        background: #AAA;
+                        border: 1px solid #AAA;
+                        color: #FFF;
+                        &:hover, &:focus {
+                            background: $aHover;
+                            border: 1px solid $aHover;
+                        }
+                    }
+                }
+            }
+        }
+        @include screen('mobile') {
+            text-align-last: left;
+            margin: 0;
+            padding: .5em .75em .5em 0;
+            ul {
+                display: flex !important;
+                flex-flow: row wrap;
+                li {
+                    display: block;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    flex-basis: auto;
+                    margin: 0 .5em .5em 0 !important;
+                }
+            }
+        }
+    }
     @include screen('mobile') {
         display: none;
     }
@@ -1018,6 +1043,67 @@
         margin-left: 1em;
         @include screen('xs_mobile') {
             margin-left: 0;
+            text-align: left;
+            label {
+                display: none;
+            }
+        }
+    }
+
+}
+
+.category_search {
+    text-align: left;
+    padding: 1em 0 0 0em;
+    margin: 0em auto 1em 0em;
+    border-top: 2px solid $primaryColor;
+    border-bottom: 2px solid $primaryColor;
+    // @include gradient(#FFF, #F7F7F7, vertical);
+    @include screen('mobile') {
+        display: none;
+    }
+    .tag_group {
+        margin-top: 0;
+        padding: .5em;
+        ul {
+            li {
+                a {
+                    &.openMore {
+                        background: #AAA;
+                        border: 1px solid #AAA;
+                        color: #FFF;
+                        &:hover, &:focus {
+                            background: $aHover;
+                            border: 1px solid $aHover;
+                        }
+                    }
+                }
+            }
+        }
+        @include screen('mobile') {
+            text-align-last: left;
+            margin: 0;
+            padding: .5em .75em .5em 0;
+            ul {
+                display: flex !important;
+                flex-flow: row wrap;
+                li {
+                    display: block;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    flex-basis: auto;
+                    margin: 0 .5em .5em 0 !important;
+                }
+            }
+        }
+    }
+    .form_inline {
+        margin-left: 1em;
+        @include screen('xs_mobile') {
+            margin-left: 0;
+            label {
+                display: none;
+            }
         }
     }
     .hotkey {
