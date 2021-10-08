@@ -109,7 +109,7 @@
                 a {
                     font-size: .813rem;
                     padding: .25em 1em;
-                    color: $primaryColor;
+                    color: #FFF;
                     font-weight: normal;
                 }
             }
@@ -1003,7 +1003,7 @@
     // @include gradient(#FFF, #F7F7F7, vertical);
     .tag_group {
         margin-top: 0;
-        padding: .5em;
+        padding: 0em .5em;
         ul {
             li {
                 a {
@@ -1041,6 +1041,16 @@
     }
     .form_inline {
         margin-left: 1em;
+        display: flex;
+        .form_grp {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            input[type="text"] {
+                flex-grow: 1;
+                max-width: 100%;
+            }
+        }
         @include screen('xs_mobile') {
             margin-left: 0;
             text-align: left;
@@ -1064,7 +1074,7 @@
     }
     .tag_group {
         margin-top: 0;
-        padding: .5em;
+        padding: 0 .5em;
         ul {
             li {
                 a {
@@ -1273,11 +1283,11 @@
                     display: block;
                     li {
                         a {
-                            color: $primaryColor;
-                            background: #FFF;
+                            color: #FFF;
+                            // background: #FFF;
                             &:hover, &:focus {
                                 color: #FFF;
-                                background: $primaryColor;
+                                // background: $primaryColor;
                             }
                         }
                     }
@@ -1387,6 +1397,7 @@
                 width: 100%;
                 height: 2rem;
                 display: flex;
+                z-index: 2;
                 a {
                     padding: .25em 0 0;
                     height: 2rem;
@@ -1497,11 +1508,9 @@
                 ul {
                     li {
                         a {
-                            color: $primaryColor;
-                            background: #FFF;
+                            color: #FFF;
                             &:hover, &:focus {
                                 color: #FFF;
-                                background: $primaryColor;
                             }
                         }
                     }
@@ -1794,6 +1803,20 @@
     @include screen('mobile') {
         padding-right: 0;
     }
+    .tag_group {
+        clear: both;
+        padding: .5em 0;
+        margin-top: 0;
+        a {
+            &.openMore {
+                background: #AAA;
+                border: 1px solid #AAA;
+                &:hover, &:focus {
+                    border: 1px solid $aHover;
+                }
+            }
+        }
+    }
     .taiwantrade_logo {
         width: 80px;
         overflow: hidden;
@@ -1895,7 +1918,7 @@
         }
     }
     .img-container {
-        width: 50%;
+        width: 35%;
         min-width: 300px;
         float: left;
         @include aspect-ratio(4, 3);
@@ -2605,16 +2628,19 @@ $companyWidth :$companyUL/$companyLength;
     }
     ul {
         @include li-reset;
+        margin: 0 !important;
         li {
             display: inline-block !important;
             margin: 0 .1em .35em 0 !important;
             padding: 0 !important;
+            font-size: .813rem !important;
             a {
-                border: 1px solid $primaryColor;
+                border: 1px solid darken($primaryColor, 3);
+                background: darken($primaryColor, 3);
                 padding: .25em 1em;
-                color: $primaryColor;
+                color: #FFF;
                 display: block;
-                font-size: .813rem;
+                font-size: .813rem !important;
                 position: relative;
                 border-radius: .25em;
                 line-height: 1.4em;
@@ -2622,6 +2648,19 @@ $companyWidth :$companyUL/$companyLength;
                     background: $aHover !important;
                     color: #FFF;
                     border: 1px solid $aHover;
+                }
+                &.active {
+                    background: $aHover !important;
+                    color: #FFF;
+                    border: 1px solid $aHover;
+                }
+                &.openMore {
+                    background: #AAA;
+                    border: 1px solid #AAA;
+                    &:hover, &:focus {
+                        background: $aHover;
+                        border: 1px solid $aHover;
+                    }
                 }
             }
         }

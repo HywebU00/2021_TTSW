@@ -1,5 +1,19 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // tag_group
+    if ($('.tag_group').length > 0) {
+        $('.tag_group').find('a.openMore').off().click(function(e) {
+            $(this).parents('.tag_group').find('.tag_all').stop().slideToggle();
+            $(this).blur();
+            e.preventDefault();
+        });
+        $('.tag_group').find('ul li a').not('.openMore').each(function(index, el) {
+            $(this).off().click(function(e) {
+                $(this).toggleClass('active');
+                e.preventDefault();
+            });
+        });
+    }
     if ($('.header.online').length > 0) {
         $('.search.online').show();
         // header btn
@@ -34,7 +48,7 @@ $(function() {
         // 打開search
         $('.top_search').off().click(function(e) {
             if (!_searchStatus) {
-                $('.search.online').css('display','block').find('.text').css('display', 'block');
+                $('.search.online').css('display', 'block').find('.text').css('display', 'block');
                 $('.burger-container').stop().removeClass('menu-opened')
                 $('.search').stop().addClass('search-opened');
                 $('.menuBlock').stop().removeClass('menu-opened');
