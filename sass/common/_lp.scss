@@ -2058,6 +2058,33 @@
             flex-grow: 0;
             flex-shrink: 1;
             flex-basis: 46%;
+            &.vip {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    z-index: 9;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    pointer-events: none;
+                    box-shadow: 0px 0px 0px 2px lighten($primaryColor, 20) inset;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 25px 25px 0;
+                    border-color: transparent lighten($primaryColor, 20) transparent transparent;
+                    z-index: 9;
+                }
+            }
             @include screen('tablet') {
                 // float: none;
                 width: 96%;
@@ -2080,9 +2107,9 @@
                 margin: 0 auto 1em;
                 padding-top: .5em;
             }
-            &.checked {
-                border: 1px solid $aHover;
-            }
+            // &.checked {
+            //     border: 1px solid $aHover;
+            // }
             label {
                 position: absolute;
                 left: .5em;
@@ -2199,18 +2226,34 @@
     &>ul {
         display: block;
         &>li {
-            &.checked {
-                border: 1px solid $aHover;
-                border-top: 2px solid $aHover;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0em;
+                border-top: 1px solid #CCC;
+                left: 0;
+                width: 100%;
             }
+            &.vip {
+                &:after {
+                    left: 0px;
+                    top: -1px;
+                    width: calc(100% - 1px);
+                }
+            }
+            // &.checked {
+            //     border: 1px solid $aHover;
+            //     border-top: 2px solid $aHover;
+            // }
+
             label {
                 left: 1em;
             }
-            border-top: 2px solid $primaryColor;
+            // border-top: 2px solid $primaryColor;
             width: 100%;
             float: none;
-            min-height: 6em;
-            margin: 0 auto 1em;
+            min-height: 5em;
+            margin: .5em auto .5em -1px;
             box-shadow: none;
             height: auto;
             overflow: hidden;
