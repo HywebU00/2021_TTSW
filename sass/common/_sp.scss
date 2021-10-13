@@ -573,8 +573,32 @@
             a {
                 padding: .5em 1.2em .5em 1em;
                 border-bottom: 1px solid RGBA(255, 255, 255, .2);
+                position: relative;
                 &:hover, &:focus {
                     background: darken($primaryColor, 10);
+                }
+                &.hasChild {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 0.35em;
+                        height: 0.35em;
+                        border: 2px solid #FFF;
+                        border-top: none;
+                        border-left: none;
+                        transform: rotate(45deg);
+                        right: .75em;
+                        top: .85em;
+                    }
+                    &.open {
+                        &:after {
+                            content: "";
+                            top: 1.2em;
+                            position: absolute;
+                            transform: rotate(-135deg);
+                        }
+                    }
+
                 }
             }
             li {
@@ -582,6 +606,16 @@
                     background: rgba(0, 0, 0, .2);
                     padding-left: 2.5em;
                     border-bottom: none;
+                    &.hasChild {
+                        &:after {
+                            display: none;
+                        }
+                        &.open {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -595,6 +629,9 @@
         padding: 1em;
         background: darken($primaryColor, 40);
         color: #FFF;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
         label {
             display: none;
         }
@@ -607,13 +644,24 @@
             font-size: 1.25em;
             font-weight: bold;
             line-height: 1.45em;
-            margin-bottom: .5em;
-            border-bottom: 1px solid $secondaryColor;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 70%;
         }
         .member_company {
             font-size: .938em;
-            margin-bottom: 1em;
             line-height: 1.45em;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 30%;
+        }
+        .form_grp {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100%;
+            padding-top: .25em;
+            border-top: 1px solid $secondaryColor;
+
         }
         .btn-grp {
             text-align: right;
@@ -1703,42 +1751,50 @@ $advsearchWidth :$advsearchUL/$advsearchLength;
     }
     .message_function {
         overflow: hidden;
-        margin-bottom: .25em;
         background: rgb(237, 237, 237);
         background: linear-gradient(0deg, rgba(237, 237, 237, 1) 0%, rgba(250, 250, 250, 1) 33%);
         ul {
             @include li-reset;
+            display: flex;
+            flex-flow: row wrap;
             li {
                 display: block;
                 width: 120px;
-                float: left;
+                // float: left;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 33.3%;
                 display: block;
                 @include screen('xs_mobile') {
                     width: 33.3%;
                 }
                 &:last-child {
-                    border-right: none;
+                    a {
+                        border-right: none;
+                    }
                 }
                 a {
-                    padding: .65em .65em;
-                    border-right: 2px solid #FFF;
+                    padding: .65em;
+                    border-right: 1px solid #FFF;
                     display: block;
                     font-size: .938em;
                     font-weight: bold;
                     text-align: center;
                     background: rgb(237, 237, 237);
-                    background: linear-gradient(0deg, rgba(237, 237, 237, 1) 0%, rgba(250, 250, 250, 1) 33%);
-                    border-bottom: 2px solid #AAA;
+                    background: linear-gradient(0deg, rgba(230, 230, 230, 1) 0%, rgba(250, 250, 250, 1) 80%);
+                    border-bottom: 1px solid #FFF;
                     color: #444;
                     &:hover, &:focus {
-                        color: #444;
-                        border-bottom: 2px solid darken($secondaryColor, 0);
+                        color: #FFF;
+                        background: $primaryColor;
+                        border-bottom: 1px solid #FFF;
                     }
                 }
                 &.active {
                     a {
-                        color: darken($secondaryColor, 10);
-                        border-bottom: 2px solid darken($secondaryColor, 0);
+                        color: #FFF;
+                        background: $primaryColor;
+                        border-bottom: 1px solid #FFF;
                     }
                 }
             }

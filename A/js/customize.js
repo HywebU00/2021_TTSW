@@ -1,5 +1,16 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // login_menu
+    $('.login_menu').find('ul ul').hide();
+    $('.login_menu').find('ul li').has('ul').children('a').addClass('hasChild');
+    $('.login_menu').find('ul li a').each(function(index, el) {
+        $(this).off().click(function(e) {
+            $(this).siblings('ul').stop().slideToggle('600', 'easeOutQuint');
+            $(this).toggleClass('open');
+            e.preventDefault();
+        });
+    });
+
     // tag_group
     if ($('.tag_group').length > 0) {
         $('.tag_group').find('a.openMore').off().click(function(e) {
