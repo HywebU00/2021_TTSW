@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////以下為demo範例///
 // 首頁區塊設定
-.col-12-full,.full {
+.col-12-full, .full {
     @include make-row;
     .container {
         max-width: 100% !important;
@@ -11,11 +11,33 @@
 .col-12 {}
 // 兩欄 6-6
 .col-6-6 {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    @include screen('mobile') {
+        flex-flow: row wrap;
+    }
+    .container {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        @include screen('mobile') {
+            flex-flow: row wrap;
+        }
+    }
     .col {
-        @include make-xs-column(12);
-        @include make-sm-column(6);
-        @include make-md-column(6);
-        @include make-lg-column(6);
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 40%;
+        display: flex;
+        align-self: stretch;
+        align-items: stretch;
+        @include screen('mobile') {
+            flex-basis: 100%;
+        }
     }
 }
 // 三欄 4-4-4

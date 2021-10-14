@@ -389,18 +389,18 @@ $(function() {
         // cellDiv6 = $(".col-4-8").find('.col')
         if (WindowWidth >= 768) {
             $('.loaction_intro').height(loactionH);
-            if ($(".col-6-6").length > 0) {
-                $(".col-6-6").each(function() {
-                    var highestBox = 0,
-                        cellDiv1 = $(this).find('.col');
-                    $(cellDiv1, this).each(function() {
-                        if ($(this).height() > highestBox) {
-                            highestBox = $(this).height();
-                        }
-                    });
-                    $(cellDiv1, this).height(highestBox);
-                });
-            }
+            // if ($(".col-6-6").length > 0) {
+            //     $(".col-6-6").each(function() {
+            //         var highestBox = 0,
+            //             cellDiv1 = $(this).find('.col');
+            //         $(cellDiv1, this).each(function() {
+            //             if ($(this).height() > highestBox) {
+            //                 highestBox = $(this).height();
+            //             }
+            //         });
+            //         $(cellDiv1, this).height(highestBox);
+            //     });
+            // }
             if ($(".col-8-4").length > 0) {
                 $(".col-8-4").each(function() {
                     var highestBox = 0,
@@ -451,7 +451,7 @@ $(function() {
             }
             $('.loaction_intro').height('auto');
         } else {
-            $('.col-6-6 .col').removeAttr('style');
+            // $('.col-6-6 .col').removeAttr('style');
             $('.col-8-4 .col').removeAttr('style');
             $('.col-4-8 .col').removeAttr('style');
             $(".topic .item").children('div').removeAttr('style');
