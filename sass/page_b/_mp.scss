@@ -513,6 +513,14 @@
         padding: 0;
         width: 100%;
         @include gutter(0);
+        &:hover{
+            .slick-prev{
+                left:25px !important;
+            }
+            .slick-next{
+                right:25px !important;
+            }
+        }
         .col {
             padding: 0;
         }
@@ -601,24 +609,26 @@
                 }
             }
         }
-        // .slick-prev {
-        //     background: url(../vendor/slick/icon_arrow_left.png) no-repeat center center;
-        //     background-size: 100%;
-        //     left: 15px;
-        //     z-index: 10;
-        //     @include screen('mobile') {
-        //         left: 2%;
-        //     }
-        // }
-        // .slick-next {
-        //     background: url(../vendor/slick/icon_arrow_right.png) no-repeat center center;
-        //     background-size: 100%;
-        //     right: 15px;
-        //     z-index: 10;
-        //     @include screen('mobile') {
-        //         right: 2%;
-        //     }
-        // }
+        .slick-prev {
+            background: url(../vendor/slick/icon_arrow_left.png) no-repeat center center;
+            background-size: 100%;
+            left: -25px;
+            z-index: 10;
+
+            @include screen('mobile') {
+                display:none !important;
+            }
+        }
+        .slick-next {
+            background: url(../vendor/slick/icon_arrow_right.png) no-repeat center center;
+            background-size: 100%;
+            right: -25px;
+            z-index: 10;
+
+            @include screen('mobile') {
+                display:none !important;
+            }
+        }
     }
     // ----------------------------------- 跑馬燈
     .marquee {
@@ -750,7 +760,7 @@
                     padding: .5em .3em;
                     font-size: .75em;
                     line-height: 1;
-                    margin: 0px .5em .5em 0;
+                    margin: 0px .5em .75em 0;
                     color: #FFF;
                     min-width: 6em;
                     float: left;
@@ -780,9 +790,11 @@
                     clear: both;
                     font-weight: bold;
                     // overflow: hidden;
+                    font-size: 1.25em;
+                    margin-top: .3em;
                     @include aSetting_nocolor;
                     @include screen('mobile') {
-                        margin-top: .3em;
+
                         display: block;
                     }
                 }
@@ -815,8 +827,23 @@
                     font-size: .938em;
                     background: #222;
                     padding: 1em;
+                    position: relative;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        height: 4em;
+                        z-index: 2;
+                        background: #222;
+                        width: 100%;
+                        left: 0;
+                        top: 4em;
+                    }
                     @include screen('mobile') {
                         height: 7.5em;
+                        &:after {
+                            content: "";
+                            top: 7em;
+                        }
                     }
                 }
                 &:hover, &:focus {
@@ -1184,7 +1211,7 @@
     // ----------------------------------- 論壇/研討會
     .seminar {
         h3 {
-            font-size: 1.25em;
+            font-size: 1.5em;
         }
         .seminar_intro {
             @extend %common_col;
@@ -1336,6 +1363,9 @@
             @include make-sm-column(6);
             @include make-md-column(8);
             @include make-lg-column(8);
+            @include screen('mobile') {
+                padding: 0;
+            }
         }
         .feature_intro {
             a.more {
@@ -1412,7 +1442,6 @@
     }
     // ----------------------------------- 產品型錄
     .product {
-        .slider {}
         ul {
             @include li-reset;
             overflow: hidden;
@@ -1422,6 +1451,12 @@
             justify-content: flex-start;
             align-items: flex-start;
             align-content: flex-start;
+            @include screen('mobile') {
+                @include gutter(0);
+                .slick-prev,.slick-next{
+                    display:none !important;
+                }
+            }
             &.row-3 {
                 li {
                     width: 33.33%;
@@ -1626,12 +1661,18 @@
     .ad {
         @include gutter();
         @include screen('mobile') {
-            @include gutter();
+            @include gutter(0);
+            .slick-prev,.slick-next{
+                display:none !important;
+            }
         }
         ul {
             @include li-reset;
             @include gutter;
             overflow: hidden;
+            @include screen('mobile') {
+                padding:0;
+            }
         }
         .slider {
             ul {
@@ -1647,7 +1688,7 @@
                         margin: 0px 15px !important;
                     }
                     @include screen('xs_mobile') {
-                        margin: 0px 15px !important;
+                        margin: 0px 12px !important;
                     }
                 }
             }
@@ -1708,11 +1749,14 @@
     .video {
         @include gutter();
         @include screen('mobile') {
-            @include gutter();
+            @include gutter(0);
         }
         ul {
             @include li-reset;
             @include gutter;
+            @include screen('mobile') {
+                padding:0;
+            }
         }
         .slider {
             ul {
@@ -1794,11 +1838,14 @@
     .photo {
         @include gutter();
         @include screen('mobile') {
-            @include gutter();
+            @include gutter(0);
         }
         ul {
             @include li-reset;
             @include gutter();
+            @include screen('mobile') {
+                @include gutter(0);
+            }
         }
         .slider {
             ul {
