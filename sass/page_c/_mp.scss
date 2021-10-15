@@ -466,10 +466,7 @@ a.more {
                     }
                 }
                 a {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-flow: column wrap;
+                    display:block;
                 }
                 .btn {
                     border-radius: 0;
@@ -493,7 +490,7 @@ a.more {
                         @include gutter;
                     }
                     &:hover, &:focus {
-                        // border: none !;
+                        border: none !important;
                     }
                     &:after {
                         height: 120px;

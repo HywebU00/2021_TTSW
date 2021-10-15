@@ -461,7 +461,8 @@
                     align-items: center;
                     flex-flow: row wrap;
                     border-radius: 0;
-                    padding: 3em .5em 2em;
+                    padding: 2em .5em 2em;
+                    font-size:1.25em;
                     align-content: flex-start;
                     @include screen('mobile') {
                         padding: 2em .5em;
