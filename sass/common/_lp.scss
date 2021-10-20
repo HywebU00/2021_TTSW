@@ -1008,10 +1008,35 @@
             li {
                 a {
                     &.openMore {
-                        background: #AAA;
-                        border: 1px solid #AAA;
-                        color: #FFF;
+                        background: lighten($primaryColor, 10);
+                        border: 1px solid lighten($primaryColor, 10);
+                        color: lighten($primaryColor, 10);
+                        position: relative;
+                        display: block;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: .5em;
+                            height: .5em;
+                            border: 2px solid #FFF;
+                            border-left: none;
+                            border-top: none;
+                            transform: rotate(45deg);
+                            top: 50%;
+                            left: 50%;
+                            margin-left: -.25em;
+                            margin-top: -.5em;
+                        }
+                        &.active {
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                transform: rotate(-135deg);
+                                margin-top: -.15em;
+                            }
+                        }
                         &:hover, &:focus {
+                            color: $aHover;
                             background: $aHover;
                             border: 1px solid $aHover;
                         }
@@ -1079,10 +1104,35 @@
             li {
                 a {
                     &.openMore {
-                        background: #AAA;
-                        border: 1px solid #AAA;
-                        color: #FFF;
+                        background: lighten($primaryColor, 10);
+                        border: 1px solid lighten($primaryColor, 10);
+                        color: lighten($primaryColor, 10);
+                        position: relative;
+                        display: block;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: .5em;
+                            height: .5em;
+                            border: 2px solid #FFF;
+                            border-left: none;
+                            border-top: none;
+                            transform: rotate(45deg);
+                            top: 50%;
+                            left: 50%;
+                            margin-left: -.25em;
+                            margin-top: -.5em;
+                        }
+                        &.active {
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                transform: rotate(-135deg);
+                                margin-top: -.15em;
+                            }
+                        }
                         &:hover, &:focus {
+                            color: $aHover;
                             background: $aHover;
                             border: 1px solid $aHover;
                         }
@@ -2700,6 +2750,7 @@ $companyWidth :$companyUL/$companyLength;
                 &.openMore {
                     background: #AAA;
                     border: 1px solid #AAA;
+                    display: none;
                     &:hover, &:focus {
                         background: $aHover;
                         border: 1px solid $aHover;

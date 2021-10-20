@@ -13,6 +13,7 @@ $(function() {
     // tag_group
     if ($('.tag_group').length > 0) {
         $('.tag_group').find('a.openMore').off().click(function(e) {
+            $(this).toggleClass('active');
             $(this).parents('.tag_group').find('.tag_all').stop().slideToggle();
             $(this).blur();
             e.preventDefault();

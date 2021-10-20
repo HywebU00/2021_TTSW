@@ -13,6 +13,7 @@ $(function() {
     // tag_group
     if ($('.tag_group').length > 0) {
         $('.tag_group').find('a.openMore').off().click(function(e) {
+            $(this).toggleClass('active');
             $(this).parents('.tag_group').find('.tag_all').stop().slideToggle();
             $(this).blur();
             e.preventDefault();
@@ -164,17 +165,17 @@ $(function() {
     }
     // 判斷ex_btn個數
     // if ($('.ex_btn').length > 0) {
- //     var _btnLength = $('.ex_btn ul li').length;
- //     if (_btnLength == 1) {
- //         $('.ex_btn').addClass('has_1');
- //     } else if (_btnLength == 2) {
- //         $('.ex_btn').addClass('has_2');
- //     } else if (_btnLength == 3) {
- //         $('.ex_btn').addClass('has_3');
- //     } else if (_btnLength == 4) {
- //         $('.ex_btn').addClass('has_4');
- //     }
- // }
+    //     var _btnLength = $('.ex_btn ul li').length;
+    //     if (_btnLength == 1) {
+    //         $('.ex_btn').addClass('has_1');
+    //     } else if (_btnLength == 2) {
+    //         $('.ex_btn').addClass('has_2');
+    //     } else if (_btnLength == 3) {
+    //         $('.ex_btn').addClass('has_3');
+    //     } else if (_btnLength == 4) {
+    //         $('.ex_btn').addClass('has_4');
+    //     }
+    // }
     // fixed_sidebar
     if ($('.fixed_bar').length > 0) {
         $('footer').addClass('has_bottom');
