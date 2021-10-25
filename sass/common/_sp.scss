@@ -437,7 +437,7 @@
         display: none;
         @include screen('mobile') {
             display: block;
-            padding: .5em;
+            padding: .5em .5em 0;
             border-bottom: 2px solid $primaryColor;
         }
         @include screen('xs_mobile') {
