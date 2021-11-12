@@ -1929,12 +1929,23 @@
             flex-grow: 1;
             flex-shrink: 1;
             width: 24%;
+            position: relative;
+            margin-left: -1px;
             span {
                 display: none;
                 color: #FFF;
                 width: 100%;
                 text-align: center;
                 font-size: .75rem;
+                position: absolute;
+                bottom: 110%;
+                left: 50%;
+                margin-left: -50%;
+                z-index: 2;
+                background: $primaryColor;
+                border-radius: .2em;
+                padding: .4em .2em;
+                line-height: 1.25em;
             }
             i {
                 font-size: 1.25em;
@@ -1944,14 +1955,14 @@
                 }
             }
             &:hover, &:focus {
-                background: $primaryColor;
-                border: 1px solid $primaryColor;
+                // background: $primaryColor;
+                // border: 1px solid $primaryColor;
                 span {
                     display: block;
                 }
-                i {
-                    display: none;
-                }
+                // i {
+                //     display: none;
+                // }
             }
         }
     }
@@ -1968,8 +1979,8 @@
         }
     }
     .img-container {
-        width: 35%;
-        min-width: 300px;
+        width: 300%;
+        min-width: 220px;
         float: left;
         @include aspect-ratio(4, 3);
         margin: 0 1em 1em 0;
@@ -2012,8 +2023,8 @@
     .Syncing_slider {
         float: left;
         background: #F1F1F1;
-        width: 60%;
-        min-width: 400px;
+        width: 40%;
+        min-width: 280px;
         margin: 0 1em 1em 0;
         padding-right: 2px;
         @include screen('tablet') {
@@ -2074,15 +2085,17 @@
                 &.youtube {
                     &:after {
                         position: absolute;
-                        width: 48px;
-                        height: 48px;
+                        width: 36px;
+                        height: 36px;
                         border-radius: 50%;
                         content: "";
                         left: 50%;
-                        margin-left: -24px;
-                        top: 25%;
+                        top: 50%;
+                        margin-left: -18px;
+                        margin-top: -18px;
                         opacity: .85;
                         background: url(../images/play.png) no-repeat center center;
+                        background-size: 100%;
                     }
                 }
             }
