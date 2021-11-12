@@ -104,6 +104,7 @@ $(function() {
     _menu.clone(true).prependTo(_mArea);
     // 切換PC/Mobile 選單
     $('.searchCtrl').clone().appendTo('.menu');
+
     function mobileMenu() {
         ww = _window.outerWidth();
         if (ww < wwSmall) {
@@ -204,7 +205,7 @@ $(function() {
         if (!search_mode) {
             // $('.search').stop(true, false).fadeIn('400', 'easeOutQuint');
             $('.search').stop(true, true).fadeIn(400, 'easeOutQuint');
-             $('.search').find('.form_grp').show();
+            $('.search').find('.form_grp').show();
             // $('.m_search').find('input[type="text"]').focus();
             search_mode = true;
         } else {
@@ -232,7 +233,7 @@ $(function() {
         // console.log("header"+hh);
         // console.log("menu"+menuH);
         // console.log($(window).scrollTop());
-        if ($(window).scrollTop() > hh - menuH) {
+        if ($(window).scrollTop() > 45) {
             if (ww >= wwSmall) {
                 $('.header').addClass('fixed');
                 // $('.header').css('margin-top', menuH - hh);

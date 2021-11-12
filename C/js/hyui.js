@@ -104,6 +104,7 @@ $(function() {
     _menu.clone(true).prependTo(_mArea);
     // 切換PC/Mobile 選單
     $('.searchCtrl').clone().appendTo('.menu');
+
     function mobileMenu() {
         ww = _window.outerWidth();
         if (ww < wwSmall) {
@@ -204,7 +205,7 @@ $(function() {
         if (!search_mode) {
             // $('.search').stop(true, false).fadeIn('400', 'easeOutQuint');
             $('.search').stop(true, true).fadeIn(400, 'easeOutQuint');
-             $('.search').find('.form_grp').show();
+            $('.search').find('.form_grp').show();
             // $('.m_search').find('input[type="text"]').focus();
             search_mode = true;
         } else {
@@ -221,7 +222,33 @@ $(function() {
         $('.search').hide();
         search_mode = false;
     });
-    固定
+    // 固定版頭
+    var hh = Math.floor($('.header').height()),
+        menuH = Math.floor(_menu.height());
+    $(window).bind("load scroll resize", function(e) {
+        ww = _window.outerWidth();
+        scrollFun();
+    });
+
+    function scrollFun() {
+        if ($(window).scrollTop() > 76) {
+            _search.hide();
+            if (ww >= wwSmall) {
+                $('.header').addClass('fixed');
+                $('.header').css('margin-top', -50);
+                $('.main').css('margin-top', 0);
+
+            } else {
+                $('.header').removeClass('fixed');
+                $('.header').css('margin-top', 0);
+                $('.main').css('margin-top', 0);
+            }
+        } else {
+            $('.header').removeClass('fixed');
+            $('.header').css('margin-top', 0);
+            $('.main').css('margin-top', 0);
+        }
+    }
     /*-----------------------------------*/
     //////////// notice訊息區塊 ////////////
     /*-----------------------------------*/

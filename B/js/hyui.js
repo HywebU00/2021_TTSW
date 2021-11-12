@@ -222,13 +222,14 @@ $(function() {
         ww = _window.outerWidth();
         scrollFun();
     });
-    function scrollFun (){
-        if ($(window).scrollTop() > hh - menuH) {
+
+    function scrollFun() {
+        if ($(window).scrollTop() > 93) {
             _search.hide();
             if (ww >= wwSmall) {
                 $('.header').addClass('fixed');
-                $('.header').css('margin-top', menuH - hh+40);
-                $('.main').css('margin-top', hh);
+                $('.header').css('margin-top', -53);
+                $('.main').css('margin-top', 140);
 
             } else {
                 $('.header').removeClass('fixed');
