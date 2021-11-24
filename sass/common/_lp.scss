@@ -134,7 +134,7 @@
             bottom: 0;
             left: 0;
             z-index: 2;
-            @include background-image(linear-gradient(top, rgba(249, 249, 249, 0) 0%, rgba(249, 249, 249, 1) 28%, rgba(249, 249, 249, 1) 99%, rgba(249, 249, 249, 1) 100%));
+            background: linear-gradient(top, rgba(249, 249, 249, 0) 0%, rgba(249, 249, 249, 1) 28%, rgba(249, 249, 249, 1) 99%, rgba(249, 249, 249, 1) 100%);
         }
     }
     .innovation_sub {

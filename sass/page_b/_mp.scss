@@ -462,7 +462,7 @@
                     flex-flow: row wrap;
                     border-radius: 0;
                     padding: 2em .5em 2em;
-                    font-size:1.25em;
+                    font-size: 1.25em;
                     align-content: flex-start;
                     @include screen('mobile') {
                         padding: 2em .5em;
@@ -514,12 +514,12 @@
         padding: 0;
         width: 100%;
         @include gutter(0);
-        &:hover{
-            .slick-prev{
-                left:25px !important;
+        &:hover {
+            .slick-prev {
+                left: 25px !important;
             }
-            .slick-next{
-                right:25px !important;
+            .slick-next {
+                right: 25px !important;
             }
         }
         .col {
@@ -561,7 +561,7 @@
                 left: 0%;
                 z-index: 99;
                 text-shadow: 0px 0px 5px RGBA(0, 0, 0, .75);
-                @include background-image(linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.95) 95%, rgba(0, 0, 0, 1) 100%));
+                background: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.95) 95%, rgba(0, 0, 0, 1) 100%);
                 padding: 1em;
                 height: 150px;
                 padding-top: 40px;
@@ -617,7 +617,7 @@
             z-index: 10;
 
             @include screen('mobile') {
-                display:none !important;
+                display: none !important;
             }
         }
         .slick-next {
@@ -627,7 +627,7 @@
             z-index: 10;
 
             @include screen('mobile') {
-                display:none !important;
+                display: none !important;
             }
         }
     }
@@ -1454,8 +1454,8 @@
             align-content: flex-start;
             @include screen('mobile') {
                 @include gutter(0);
-                .slick-prev,.slick-next{
-                    display:none !important;
+                .slick-prev, .slick-next {
+                    display: none !important;
                 }
             }
             &.row-3 {
@@ -1663,8 +1663,8 @@
         @include gutter();
         @include screen('mobile') {
             @include gutter(0);
-            .slick-prev,.slick-next{
-                display:none !important;
+            .slick-prev, .slick-next {
+                display: none !important;
             }
         }
         ul {
@@ -1672,7 +1672,7 @@
             @include gutter;
             overflow: hidden;
             @include screen('mobile') {
-                padding:0;
+                padding: 0;
             }
         }
         .slider {
@@ -1756,7 +1756,7 @@
             @include li-reset;
             @include gutter;
             @include screen('mobile') {
-                padding:0;
+                padding: 0;
             }
         }
         .slider {

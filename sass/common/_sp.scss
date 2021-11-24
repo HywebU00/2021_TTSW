@@ -129,11 +129,12 @@
             }
         }
         .btn_grp {
-            flex-basis: 25%;
+            flex-basis: 100%;
             margin: 0 .5em;
             display: flex;
             button {
                 margin-top: auto;
+                margin: auto .25em;
             }
             @include screen('mobile') {
                 flex-basis: 100%;

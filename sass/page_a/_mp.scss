@@ -384,7 +384,7 @@
             @include gutter;
             text-align: center;
             padding-left: 0;
-            display:flex;
+            display: flex;
             @include screen('mobile') {
                 padding: 1em 0;
             }
@@ -392,9 +392,9 @@
                 // width: calc(33% -1px);
                 padding: 0;
                 display: block;
-                flex-grow:1;
-                flex-shrink:1;
-                flex-basis:33.3333%;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 33.3333%;
                 margin: 0 1px 0 0px;
                 .btn {
                     border-radius: 0;
@@ -452,7 +452,7 @@
         &:after {
             content: "";
             // background: RGBA(0, 0, 0, .35);
-            @include background-image(linear-gradient(top, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0) 100%));
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0) 100%);
             width: 100%;
             position: absolute;
             z-index: 2;
@@ -497,7 +497,7 @@
         &:after {
             content: "";
             // background: RGBA(0, 0, 0, .35);
-            @include background-image(linear-gradient(top, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0) 100%));
+            background: linear-gradient(top, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0) 100%);
             width: 100%;
             position: absolute;
             z-index: 2;
@@ -1742,7 +1742,7 @@
                     padding: .5em 1em;
                     transition: .3s ease-out;
                     @include text-overflow;
-                    @include background-image(linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .95) 70%));
+                    background: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .95) 70%);
                 }
                 &:before {
                     content: "";

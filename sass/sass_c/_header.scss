@@ -4,7 +4,7 @@
     width: 100%;
     z-index: 9999;
     height: 200px;
-    @include background-image(linear-gradient(top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%));
+    background: linear-gradient(top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     @extend %clearfix;
     @include screen('tablet') {
         position: fixed;
@@ -157,11 +157,11 @@
                 width: 220px;
                 height: 60px;
                 margin: 0px auto;
-                display:flex;
+                display: flex;
                 justify-content: center;
                 align-items: center;
                 img {
-                    flex:1 1 100%;
+                    flex: 1 1 100%;
                     width: 100%;
                     height: auto;
                     max-height: 60px;
@@ -205,11 +205,11 @@
                 padding: .5em;
                 text-decoration: none;
                 @include aSetting_nocolor;
-                img{
-                    max-width:1.75em;
-                    max-height:1.25em;
-                    display:inline-block;
-                    vertical-align:middle;
+                img {
+                    max-width: 1.75em;
+                    max-height: 1.25em;
+                    display: inline-block;
+                    vertical-align: middle;
                     margin-right: .2em;
                 }
             }
@@ -230,11 +230,11 @@
             border: none;
             border-radius: 0;
             margin: 0;
-            height:34px;
+            height: 34px;
             &:hover, &:focus {
                 background: lighten($My_primaryColor, 10);
                 box-shadow: none;
-                border:none !important;
+                border: none !important;
             }
         }
     }
@@ -704,7 +704,7 @@ $menuItems:2;
     h1 {
         display: none;
     }
-     .searchCtrl {
+    .searchCtrl {
         display: block !important;
         filter: invert(100%);
     }
